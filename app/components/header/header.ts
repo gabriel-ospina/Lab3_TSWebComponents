@@ -14,21 +14,21 @@ export enum HeaderAttribute{
 }
 
 class myHeader extends HTMLElement {
-    logoicon?: URL;
-    search?: URL;
-    categ?: URL;
-    supp?: URL;
-    wish?: URL;
-    cart?: URL;
-    login?: URL;
-    store?: URL;
-    games?: URL;
-    switch?: URL;
-    news?: URL;
-    play?: URL;
+    logoicon?: string;
+    search?: string;
+    categ?: string;
+    supp?: string;
+    wish?: string;
+    cart?: string;
+    login?: string;
+    store?: string;
+    games?: string;
+    switch?: string;
+    news?: string;
+    play?: string;
 
     static get observedAttributes(){
-        const attrs: Record<HeaderAttribute, null> = {
+        const headattrs: Record<HeaderAttribute, null> = {
             logoicon: null,
             search: null,
             categ: null,
@@ -42,7 +42,7 @@ class myHeader extends HTMLElement {
             news: null,
             play: null,
         };
-        return Object.keys(attrs);
+        return Object.keys(headattrs);
     }
 
     constructor(){
@@ -51,13 +51,13 @@ class myHeader extends HTMLElement {
     }
 
     connectedCallback(){
-        this.render
+        this.render();
     }
 
     attributeChangedCallback(
         propName: HeaderAttribute,
-        _: URL | undefined,
-        newValue: URL | undefined
+        _: string | undefined,
+        newValue: string | undefined
     ){
         this[propName] = newValue;
         this.render();

@@ -15,7 +15,7 @@ export var HeaderAttribute;
 })(HeaderAttribute || (HeaderAttribute = {}));
 class myHeader extends HTMLElement {
     static get observedAttributes() {
-        const attrs = {
+        const headattrs = {
             logoicon: null,
             search: null,
             categ: null,
@@ -29,14 +29,14 @@ class myHeader extends HTMLElement {
             news: null,
             play: null,
         };
-        return Object.keys(attrs);
+        return Object.keys(headattrs);
     }
     constructor() {
         super();
         this.attachShadow({ mode: 'open' });
     }
     connectedCallback() {
-        this.render;
+        this.render();
     }
     attributeChangedCallback(propName, _, newValue) {
         this[propName] = newValue;

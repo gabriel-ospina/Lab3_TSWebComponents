@@ -1,8 +1,14 @@
 import * as components from "./components/indexComponents.js"
 import myHeader, { HeaderAttribute } from "./components/header/header.js"
+import Banner, { BannerAttribute } from "./components/banner/banner.js"
+import MainSec, { MainSecAttribute } from "./components/mainSection/mainSection.js";
+
+import dataMainSec from "./Data/DataMainSection.js";
 
 class AppContainer extends HTMLElement {
     header: myHeader;
+    banner: Banner;
+    mainsection: MainSec []=[];
 
     constructor(){
         super();
@@ -23,7 +29,21 @@ class AppContainer extends HTMLElement {
             // headersec.setAttribute(HeaderAttribute.news, "");
             // headersec.setAttribute(HeaderAttribute.play, "");
             this.header= headersec;
+
+        const bannersec = this.ownerDocument.createElement("my-banner") as Banner;
+            bannersec.setAttribute(BannerAttribute.image, "https://assets.nintendo.com/image/upload/f_auto/q_auto/c_fill,w_1500/ncom/en_US/merchandising/center-stage-banner/bayonetta-origins/3600x1300_BayoOrigins_centerstage_desktop");
+            bannersec.setAttribute(BannerAttribute.text, "Bayonetta Origins: Cereza and the Lost Demon™");
+            bannersec.setAttribute(BannerAttribute.ageclass, "https://www.esrb.org/wp-content/uploads/2019/05/T.svg");
+            this.banner= bannersec
         
+        dataMainSec.forEach((mainsec) => {
+            const maincard = this.ownerDocument.createElement("main-section") as MainSec;
+                maincard.setAttribute(MainSecAttribute.titlesec, mainsec.titlesec);
+                maincard.setAttribute(MainSecAttribute.image, mainsec.image);
+                maincard.setAttribute(MainSecAttribute.text, mainsec.text);
+                maincard.setAttribute(MainSecAttribute.label, mainsec.label);
+                this.mainsection.push(maincard);
+        })
     };
 
     connectedCallback(){
@@ -33,21 +53,23 @@ class AppContainer extends HTMLElement {
     render(){
         if(this.shadowRoot) {
             //alert(JSON.stringify(this.header.join(""),null,3));
-            //alert(this.header.join(""));
+            //alert(this.banner);
             this.shadowRoot.innerHTML=`<link rel="stylesheet" href="../app/app.css">`;
 
-            const oSec= this.ownerDocument.createElement("section");
+            const headerSec= this.ownerDocument.createElement("section");
+            headerSec.appendChild(this.header);
+            this.shadowRoot.appendChild(headerSec);
 
-            oSec.appendChild(this.header);
-            this.shadowRoot.appendChild(oSec);
+            
+            const bannerSec=this.ownerDocument.createElement("section");
+            bannerSec.appendChild(this.banner);
+            this.shadowRoot.appendChild(bannerSec);
+
+            const firstMainSec=this.ownerDocument.createElement("section");
+            firstMainSec.appendChild(this.mainsection[0]);
+            this.shadowRoot.appendChild(firstMainSec);
 
 
-
-            // <section>
-            // <my-header>
-            // ${this.header.join("")}
-            // </my-header>
-            // </section>
         }
     }
 }
