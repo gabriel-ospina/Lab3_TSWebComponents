@@ -8,7 +8,7 @@ import dataMainSec from "./Data/DataMainSection.js";
 class AppContainer extends HTMLElement {
     header: myHeader;
     banner: Banner;
-    mainsection: MainSec []=[];
+    mainsections: MainSec []=[];
 
     constructor(){
         super();
@@ -42,7 +42,7 @@ class AppContainer extends HTMLElement {
                 maincard.setAttribute(MainSecAttribute.image, mainsec.image);
                 maincard.setAttribute(MainSecAttribute.text, mainsec.text);
                 maincard.setAttribute(MainSecAttribute.label, mainsec.label);
-                this.mainsection.push(maincard);
+                this.mainsections.push(maincard);
         })
     };
 
@@ -66,9 +66,14 @@ class AppContainer extends HTMLElement {
             this.shadowRoot.appendChild(bannerSec);
 
             const firstMainSec=this.ownerDocument.createElement("section");
-            firstMainSec.appendChild(this.mainsection[0]);
+            firstMainSec.appendChild(this.mainsections[0]);
             this.shadowRoot.appendChild(firstMainSec);
-
+            
+            const secondMainSec=this.ownerDocument.createElement("section");
+            secondMainSec.appendChild(this.mainsections[1])
+            secondMainSec.appendChild(this.mainsections[2])
+            this.shadowRoot.appendChild(secondMainSec)
+            
 
         }
     }
