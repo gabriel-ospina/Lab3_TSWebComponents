@@ -1,34 +1,21 @@
-export enum HeaderAttribute{
-    "logoicon"="logoicon",
-    "search"="search",
-    "categ"="categ",
-    "supp"="supp",
-    "wish"="wish",
-    "cart"="cart",
-    "login"="login",
-    "store"="store",
-    "games"="games",
-    "switch"="switch",
-    "news"="news",
-    "play"="play",
-}
-
+export var HeaderAttribute;
+(function (HeaderAttribute) {
+    HeaderAttribute["logoicon"] = "logoicon";
+    HeaderAttribute["search"] = "search";
+    HeaderAttribute["categ"] = "categ";
+    HeaderAttribute["supp"] = "supp";
+    HeaderAttribute["wish"] = "wish";
+    HeaderAttribute["cart"] = "cart";
+    HeaderAttribute["login"] = "login";
+    HeaderAttribute["store"] = "store";
+    HeaderAttribute["games"] = "games";
+    HeaderAttribute["switch"] = "switch";
+    HeaderAttribute["news"] = "news";
+    HeaderAttribute["play"] = "play";
+})(HeaderAttribute || (HeaderAttribute = {}));
 class myHeader extends HTMLElement {
-    logoicon?: URL;
-    search?: URL;
-    categ?: URL;
-    supp?: URL;
-    wish?: URL;
-    cart?: URL;
-    login?: URL;
-    store?: URL;
-    games?: URL;
-    switch?: URL;
-    news?: URL;
-    play?: URL;
-
-    static get observedAttributes(){
-        const attrs: Record<HeaderAttribute, null> = {
+    static get observedAttributes() {
+        const attrs = {
             logoicon: null,
             search: null,
             categ: null,
@@ -44,33 +31,25 @@ class myHeader extends HTMLElement {
         };
         return Object.keys(attrs);
     }
-
-    constructor(){
+    constructor() {
         super();
-        this.attachShadow({mode: 'open'});
+        this.attachShadow({ mode: 'open' });
     }
-
-    connectedCallback(){
-        this.render
+    connectedCallback() {
+        this.render;
     }
-
-    attributeChangedCallback(
-        propName: HeaderAttribute,
-        _: URL | undefined,
-        newValue: URL | undefined
-    ){
+    attributeChangedCallback(propName, _, newValue) {
         this[propName] = newValue;
         this.render();
     }
-
-    render(){
-        if(this.shadowRoot) {
+    render() {
+        if (this.shadowRoot) {
             this.shadowRoot.innerHTML = `
             <link rel="stylesheet" href="../app/components/header/header.css">
             <header>
                 <div class="upper">
                     <div class="start">
-                        <button style="background-image: url(${this.logoicon  || "https://www.scraapy.com/en/autoparts_images/165907301262e371f40bf89.png"});"></button>
+                        <button style="background-image: url(${this.logoicon || "https://www.scraapy.com/en/autoparts_images/165907301262e371f40bf89.png"});"></button>
                         <form>
                             <input type="text" placeholder="Search games, hardware, news, etc...">
                             <button>All categories<div style="background-image: url(${this.categ || "https://static.thenounproject.com/png/4700132-200.png"});"></div></button>
@@ -122,10 +101,9 @@ class myHeader extends HTMLElement {
                     </button>
                 </div>
             </header>
-            `
+            `;
         }
     }
 }
-
-customElements.define("my-header", myHeader)
-export default myHeader
+customElements.define("my-header", myHeader);
+export default myHeader;
