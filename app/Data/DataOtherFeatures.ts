@@ -26,3 +26,5 @@ const dataOtherFeatures: DataShape [] = [
      text: "Nintendo Switch"
     },
 ]
+
+export default dataOtherFeatures

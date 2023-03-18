@@ -21,14 +21,7 @@ class Banner extends HTMLElement {
         this.render();
     }
     attributeChangedCallback(propName, _, newValue) {
-        switch (propName) {
-            case BannerAttribute.text:
-                this.text = newValue ? String(newValue) : undefined;
-                break;
-            default:
-                this[propName] = newValue;
-                break;
-        }
+        this[propName] = newValue;
         this.render();
     }
     render() {

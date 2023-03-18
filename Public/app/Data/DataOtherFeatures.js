@@ -1,4 +1,3 @@
-"use strict";
 const dataOtherFeatures = [
     {
         image: "https://i.ytimg.com/vi/66j31wFLB_s/maxresdefault.jpg",
@@ -21,3 +20,4 @@ const dataOtherFeatures = [
         text: "Nintendo Switch"
     },
 ];
+export default dataOtherFeatures;

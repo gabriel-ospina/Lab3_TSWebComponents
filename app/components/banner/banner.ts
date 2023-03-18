@@ -5,9 +5,9 @@ export enum BannerAttribute{
 }
 
 class Banner extends HTMLElement {
-    image?: URL;
+    image?: string;
     text?: string;
-    ageclass?: URL;
+    ageclass?: string;
 
     static get observedAttributes(){
         const banattrs: Record<BannerAttribute,null> = {
@@ -29,19 +29,10 @@ class Banner extends HTMLElement {
 
     attributeChangedCallback(
         propName: BannerAttribute,
-        _: URL | undefined,
-        newValue: URL | undefined
+        _: string | undefined,
+        newValue: string | undefined
     ){
-        switch (propName) {
-            case BannerAttribute.text:
-                this.text = newValue? String(newValue) : undefined;
-            break;
-            
-            default:
-                this[propName] = newValue;
-            break;
-        }
-
+        this[propName] = newValue;
         this.render();
     }
 
