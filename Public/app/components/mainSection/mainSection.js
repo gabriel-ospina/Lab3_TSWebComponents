@@ -35,7 +35,7 @@ class MainSec extends HTMLElement {
             this.shadowRoot.innerHTML = `
             <link rel="stylesheet" href="../app/components/mainSection/mainSection.css">
             <section>
-            <h2>${this.titlesec || "plssss"}</h2>
+            <h1>${this.titlesec || "plssss"}</h1>
             <div style="background-image: url(${this.image || "https://www.scraapy.com/en/autoparts_images/165907301262e371f40bf89.png"});"></div>
             <section class="lower">
                 <h3>${this.text || "noooo"}</h3><button>${this.label || "carajo"}</button>

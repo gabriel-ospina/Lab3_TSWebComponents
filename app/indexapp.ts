@@ -115,7 +115,7 @@ class AppContainer extends HTMLElement {
             secondMainSec.appendChild(this.mainsections[2]);
             this.shadowRoot.appendChild(secondMainSec);
 
-            const newsTitleSec=this.ownerDocument.createElement("h2");
+            const newsTitleSec=this.ownerDocument.createElement("h1");
             const newsTitile= this.ownerDocument.createTextNode("News");
             newsTitleSec.appendChild(newsTitile);
             this.shadowRoot.appendChild(newsTitleSec);
@@ -132,17 +132,17 @@ class AppContainer extends HTMLElement {
                 this.shadowRoot?.appendChild(otherNewsSec);
             })
 
-            const characTitleSec=this.ownerDocument.createElement("h2");
+            const characTitleSec=this.ownerDocument.createElement("h1");
             const characTitle= this.ownerDocument.createTextNode("Characters");
             characTitleSec.appendChild(characTitle);
             this.shadowRoot.appendChild(characTitleSec);
             
-            const digBSTitleSec=this.ownerDocument.createElement("h2");
+            const digBSTitleSec=this.ownerDocument.createElement("h1");
             const digBSTitile= this.ownerDocument.createTextNode("Digital best sellers");
             digBSTitleSec.appendChild(digBSTitile);
             this.shadowRoot.appendChild(digBSTitleSec);
             
-            const digNewRelTitleSec=this.ownerDocument.createElement("h2");
+            const digNewRelTitleSec=this.ownerDocument.createElement("h1");
             const digNewRelTitile= this.ownerDocument.createTextNode("Digital new realease");
             digNewRelTitleSec.appendChild(digNewRelTitile);
             this.shadowRoot.appendChild(digNewRelTitleSec);
