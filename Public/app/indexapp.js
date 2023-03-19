@@ -3,15 +3,18 @@ import { BannerAttribute } from "./components/banner/banner.js";
 import { MainSecAttribute } from "./components/mainSection/mainSection.js";
 import { OtherFeatAttribute } from "./components/otherFeatures/otherFeatures.js";
 import { MainNewsAttribute } from "./components/mainNews/mainNews.js";
+import { OtherNewsAttribute } from "./components/otherNews/otherNews.js";
 import dataMainSec from "./Data/DataMainSection.js";
 import dataOtherFeatures from "./Data/DataOtherFeatures.js";
 import dataMainNews from "./Data/DataMainNews.js";
+import dataOtherNews from "./Data/DataOtherNews.js";
 class AppContainer extends HTMLElement {
     constructor() {
         super();
         this.mainsections = [];
         this.otherfeats = [];
         this.mainnews = [];
+        this.othernews = [];
         this.attachShadow({ mode: "open" });
         const headersec = this.ownerDocument.createElement("my-header");
         headersec.setAttribute(HeaderAttribute.logoicon, "https://www.scraapy.com/en/autoparts_images/165907301262e371f40bf89.png");
@@ -55,6 +58,13 @@ class AppContainer extends HTMLElement {
             mainnewcard.setAttribute(MainNewsAttribute.date, mainnew.date);
             this.mainnews.push(mainnewcard);
         });
+        dataOtherNews.forEach((othernew) => {
+            const othernewcard = this.ownerDocument.createElement("other-news");
+            othernewcard.setAttribute(OtherNewsAttribute.image, othernew.image);
+            othernewcard.setAttribute(OtherNewsAttribute.tittle, othernew.tittle);
+            othernewcard.setAttribute(OtherNewsAttribute.date, othernew.date);
+            this.othernews.push(othernewcard);
+        });
     }
     ;
     connectedCallback() {
@@ -93,6 +103,12 @@ class AppContainer extends HTMLElement {
                 var _a;
                 mainNewsSec.appendChild(mnew);
                 (_a = this.shadowRoot) === null || _a === void 0 ? void 0 : _a.appendChild(mainNewsSec);
+            });
+            const otherNewsSec = this.ownerDocument.createElement("section");
+            this.othernews.forEach((onew) => {
+                var _a;
+                otherNewsSec.appendChild(onew);
+                (_a = this.shadowRoot) === null || _a === void 0 ? void 0 : _a.appendChild(otherNewsSec);
             });
             const characTitleSec = this.ownerDocument.createElement("h2");
             const characTitle = this.ownerDocument.createTextNode("Characters");

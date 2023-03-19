@@ -4,16 +4,20 @@ import Banner, { BannerAttribute } from "./components/banner/banner.js"
 import MainSec, { MainSecAttribute } from "./components/mainSection/mainSection.js";
 import OtherFeatures, { OtherFeatAttribute } from "./components/otherFeatures/otherFeatures.js";
 import MainNews, { MainNewsAttribute } from "./components/mainNews/mainNews.js";
+import OtherNews, { OtherNewsAttribute } from "./components/otherNews/otherNews.js";
+
 
 import dataMainSec from "./Data/DataMainSection.js";
 import dataOtherFeatures from "./Data/DataOtherFeatures.js";
 import dataMainNews from "./Data/DataMainNews.js";
+import dataOtherNews from "./Data/DataOtherNews.js";
 class AppContainer extends HTMLElement {
     header: myHeader;
     banner: Banner;
     mainsections: MainSec []=[];
     otherfeats: OtherFeatures []=[];
     mainnews: MainNews []=[];
+    othernews: OtherNews []= [];
 
     constructor(){
         super();
@@ -66,6 +70,14 @@ class AppContainer extends HTMLElement {
                 mainnewcard.setAttribute(MainNewsAttribute.date, mainnew.date);
                 this.mainnews.push(mainnewcard);
         })
+        
+        dataOtherNews.forEach((othernew) => {
+            const othernewcard = this.ownerDocument.createElement("other-news") as OtherNews;
+                othernewcard.setAttribute(OtherNewsAttribute.image, othernew.image);
+                othernewcard.setAttribute(OtherNewsAttribute.tittle, othernew.tittle);
+                othernewcard.setAttribute(OtherNewsAttribute.date, othernew.date);
+                this.othernews.push(othernewcard);
+        })
 
     };
 
@@ -112,6 +124,12 @@ class AppContainer extends HTMLElement {
             this.mainnews.forEach((mnew) => {
                 mainNewsSec.appendChild(mnew);
                 this.shadowRoot?.appendChild(mainNewsSec);
+            })
+            
+            const otherNewsSec=this.ownerDocument.createElement("section");
+            this.othernews.forEach((onew) => {
+                otherNewsSec.appendChild(onew);
+                this.shadowRoot?.appendChild(otherNewsSec);
             })
 
             const characTitleSec=this.ownerDocument.createElement("h2");
