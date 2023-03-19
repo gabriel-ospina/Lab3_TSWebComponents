@@ -55,6 +55,7 @@ class MainSec extends HTMLElement{
                 <h3>${this.text || "noooo"}</h3><button>${this.label || "carajo"}</button>
             </section>
             </section>
+            <hr>
             `
         }
     }

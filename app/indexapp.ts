@@ -110,6 +110,9 @@ class AppContainer extends HTMLElement {
             bannerSec.appendChild(this.banner);
             this.shadowRoot.appendChild(bannerSec);
 
+            const hr1= this.ownerDocument.createElement("hr");
+            this.shadowRoot.appendChild(hr1);
+
             const firstMainSec=this.ownerDocument.createElement("section");
             firstMainSec.appendChild(this.mainsections[0]);
             this.shadowRoot.appendChild(firstMainSec);
@@ -119,6 +122,9 @@ class AppContainer extends HTMLElement {
                 featSec.appendChild(ofeat);
                 this.shadowRoot?.appendChild(featSec);
             })
+
+            const hr2= this.ownerDocument.createElement("hr");
+            this.shadowRoot.appendChild(hr2);
             
             const secondMainSec=this.ownerDocument.createElement("section");
             secondMainSec.appendChild(this.mainsections[1]);
@@ -142,6 +148,9 @@ class AppContainer extends HTMLElement {
                 this.shadowRoot?.appendChild(otherNewsSec);
             })
 
+            const hr3= this.ownerDocument.createElement("hr");
+            this.shadowRoot.appendChild(hr3);
+
             const characTitleSec=this.ownerDocument.createElement("h1");
             const characTitle= this.ownerDocument.createTextNode("Characters");
             characTitleSec.appendChild(characTitle);
@@ -152,16 +161,31 @@ class AppContainer extends HTMLElement {
                 charSec.appendChild(ccard);
                 this.shadowRoot?.appendChild(charSec);
             })
+
+            const hr4= this.ownerDocument.createElement("hr");
+            this.shadowRoot.appendChild(hr4);
             
-            const digBSTitleSec=this.ownerDocument.createElement("h1");
-            const digBSTitile= this.ownerDocument.createTextNode("Digital best sellers");
-            digBSTitleSec.appendChild(digBSTitile);
-            this.shadowRoot.appendChild(digBSTitleSec);
-            
-            const digNewRelTitleSec=this.ownerDocument.createElement("h1");
-            const digNewRelTitile= this.ownerDocument.createTextNode("Digital new realease");
-            digNewRelTitleSec.appendChild(digNewRelTitile);
-            this.shadowRoot.appendChild(digNewRelTitleSec);
+            const digBSTitleDiv=this.ownerDocument.createElement("div");
+            const digBSTitleH1=this.ownerDocument.createElement("h1");
+            const digBSTitle= this.ownerDocument.createTextNode("Digital best sellers");
+            const seeFullList1=this.ownerDocument.createElement("span");
+            const seeFulllist1text=this.ownerDocument.createTextNode("see full list")
+            digBSTitleH1.appendChild(digBSTitle);
+            digBSTitleDiv.appendChild(digBSTitleH1)
+            seeFullList1.appendChild(seeFulllist1text)
+            digBSTitleDiv.appendChild(seeFullList1)
+            this.shadowRoot.appendChild(digBSTitleDiv);
+
+            const digNewRelTitleDiv=this.ownerDocument.createElement("div");
+            const digNewRelTitleH1=this.ownerDocument.createElement("h1");
+            const digNewRelTitle= this.ownerDocument.createTextNode("Digital new releases");
+            const seeFullList2=this.ownerDocument.createElement("span");
+            const seeFulllist2text=this.ownerDocument.createTextNode("see full list")
+            digNewRelTitleH1.appendChild(digNewRelTitle);
+            digNewRelTitleDiv.appendChild(digNewRelTitleH1)
+            seeFullList2.appendChild(seeFulllist2text)
+            digNewRelTitleDiv.appendChild(seeFullList2)
+            this.shadowRoot.appendChild(digNewRelTitleDiv);
             
         }
     }
