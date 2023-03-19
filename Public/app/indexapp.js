@@ -73,6 +73,22 @@ class AppContainer extends HTMLElement {
             secondMainSec.appendChild(this.mainsections[1]);
             secondMainSec.appendChild(this.mainsections[2]);
             this.shadowRoot.appendChild(secondMainSec);
+            const newsTitleSec = this.ownerDocument.createElement("h2");
+            const newsTitile = this.ownerDocument.createTextNode("News");
+            newsTitleSec.appendChild(newsTitile);
+            this.shadowRoot.appendChild(newsTitleSec);
+            const characTitleSec = this.ownerDocument.createElement("h2");
+            const characTitle = this.ownerDocument.createTextNode("Characters");
+            characTitleSec.appendChild(characTitle);
+            this.shadowRoot.appendChild(characTitleSec);
+            const digBSTitleSec = this.ownerDocument.createElement("h2");
+            const digBSTitile = this.ownerDocument.createTextNode("Digital best sellers");
+            digBSTitleSec.appendChild(digBSTitile);
+            this.shadowRoot.appendChild(digBSTitleSec);
+            const digNewRelTitleSec = this.ownerDocument.createElement("h2");
+            const digNewRelTitile = this.ownerDocument.createTextNode("Digital new releases");
+            digNewRelTitleSec.appendChild(digNewRelTitile);
+            this.shadowRoot.appendChild(digNewRelTitleSec);
         }
     }
 }
