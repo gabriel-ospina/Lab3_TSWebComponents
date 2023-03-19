@@ -42,6 +42,7 @@ class MainNews extends HTMLElement {
      render(){
         if(this.shadowRoot){
             this.shadowRoot.innerHTML=`
+            <link rel="stylesheet" href="../app/components/mainNews/mainNews.ts">
             <section>
                 <img src="${this.image || "https://www.scraapy.com/en/autoparts_images/165907301262e371f40bf89.png"}">
                 <div>

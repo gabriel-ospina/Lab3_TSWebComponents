@@ -3,15 +3,17 @@ import myHeader, { HeaderAttribute } from "./components/header/header.js"
 import Banner, { BannerAttribute } from "./components/banner/banner.js"
 import MainSec, { MainSecAttribute } from "./components/mainSection/mainSection.js";
 import OtherFeatures, { OtherFeatAttribute } from "./components/otherFeatures/otherFeatures.js";
+import MainNews, { MainNewsAttribute } from "./components/mainNews/mainNews.js";
 
 import dataMainSec from "./Data/DataMainSection.js";
 import dataOtherFeatures from "./Data/DataOtherFeatures.js";
-
+import dataMainNews from "./Data/DataMainNews.js";
 class AppContainer extends HTMLElement {
     header: myHeader;
     banner: Banner;
     mainsections: MainSec []=[];
     otherfeats: OtherFeatures []=[];
+    mainnews: MainNews []=[];
 
     constructor(){
         super();
@@ -55,6 +57,16 @@ class AppContainer extends HTMLElement {
                 featcard.setAttribute(OtherFeatAttribute.text, otherfeat.text);
                 this.otherfeats.push(featcard);
         })
+        
+        dataMainNews.forEach((mainnew) => {
+            const mainnewcard = this.ownerDocument.createElement("main-news") as MainNews;
+                mainnewcard.setAttribute(MainNewsAttribute.image, mainnew.image);
+                mainnewcard.setAttribute(MainNewsAttribute.tittle, mainnew.tittle);
+                mainnewcard.setAttribute(MainNewsAttribute.text, mainnew.text);
+                mainnewcard.setAttribute(MainNewsAttribute.date, mainnew.date);
+                this.mainnews.push(mainnewcard);
+        })
+
     };
 
     connectedCallback(){
@@ -96,6 +108,12 @@ class AppContainer extends HTMLElement {
             newsTitleSec.appendChild(newsTitile);
             this.shadowRoot.appendChild(newsTitleSec);
 
+            const mainNewsSec=this.ownerDocument.createElement("section");
+            this.mainnews.forEach((mnew) => {
+                mainNewsSec.appendChild(mnew);
+                this.shadowRoot?.appendChild(mainNewsSec);
+            })
+
             const characTitleSec=this.ownerDocument.createElement("h2");
             const characTitle= this.ownerDocument.createTextNode("Characters");
             characTitleSec.appendChild(characTitle);
@@ -107,7 +125,7 @@ class AppContainer extends HTMLElement {
             this.shadowRoot.appendChild(digBSTitleSec);
             
             const digNewRelTitleSec=this.ownerDocument.createElement("h2");
-            const digNewRelTitile= this.ownerDocument.createTextNode("Digital new releases");
+            const digNewRelTitile= this.ownerDocument.createTextNode("Digital new realease");
             digNewRelTitleSec.appendChild(digNewRelTitile);
             this.shadowRoot.appendChild(digNewRelTitleSec);
             
