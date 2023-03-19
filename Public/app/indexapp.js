@@ -4,10 +4,12 @@ import { MainSecAttribute } from "./components/mainSection/mainSection.js";
 import { OtherFeatAttribute } from "./components/otherFeatures/otherFeatures.js";
 import { MainNewsAttribute } from "./components/mainNews/mainNews.js";
 import { OtherNewsAttribute } from "./components/otherNews/otherNews.js";
+import { CharacCardsAttribute } from "./components/characters/characters.js";
 import dataMainSec from "./Data/DataMainSection.js";
 import dataOtherFeatures from "./Data/DataOtherFeatures.js";
 import dataMainNews from "./Data/DataMainNews.js";
 import dataOtherNews from "./Data/DataOtherNews.js";
+import dataCharacCards from "./Data/DataCharacterCards.js";
 class AppContainer extends HTMLElement {
     constructor() {
         super();
@@ -15,6 +17,7 @@ class AppContainer extends HTMLElement {
         this.otherfeats = [];
         this.mainnews = [];
         this.othernews = [];
+        this.charcards = [];
         this.attachShadow({ mode: "open" });
         const headersec = this.ownerDocument.createElement("my-header");
         headersec.setAttribute(HeaderAttribute.logoicon, "https://www.scraapy.com/en/autoparts_images/165907301262e371f40bf89.png");
@@ -65,6 +68,13 @@ class AppContainer extends HTMLElement {
             othernewcard.setAttribute(OtherNewsAttribute.date, othernew.date);
             this.othernews.push(othernewcard);
         });
+        dataCharacCards.forEach((characprev) => {
+            const charcard = this.ownerDocument.createElement("char-card");
+            charcard.setAttribute(CharacCardsAttribute.image, characprev.image);
+            charcard.setAttribute(CharacCardsAttribute.background, characprev.background);
+            charcard.setAttribute(CharacCardsAttribute.name, characprev.name);
+            this.charcards.push(charcard);
+        });
     }
     ;
     connectedCallback() {
@@ -114,6 +124,12 @@ class AppContainer extends HTMLElement {
             const characTitle = this.ownerDocument.createTextNode("Characters");
             characTitleSec.appendChild(characTitle);
             this.shadowRoot.appendChild(characTitleSec);
+            const charSec = this.ownerDocument.createElement("section");
+            this.charcards.forEach((ccard) => {
+                var _a;
+                charSec.appendChild(ccard);
+                (_a = this.shadowRoot) === null || _a === void 0 ? void 0 : _a.appendChild(charSec);
+            });
             const digBSTitleSec = this.ownerDocument.createElement("h1");
             const digBSTitile = this.ownerDocument.createTextNode("Digital best sellers");
             digBSTitleSec.appendChild(digBSTitile);

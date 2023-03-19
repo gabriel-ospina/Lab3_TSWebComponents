@@ -4,3 +4,4 @@ export { default as MainSec } from "./mainSection/mainSection.js";
 export { default as OtherFeatures } from "./otherFeatures/otherFeatures.js";
 export { default as MainNews } from "./mainNews/mainNews.js";
 export { default as OtherNews } from "./otherNews/otherNews.js";
+export { default as CharacCards } from "./characters/characters.js";
