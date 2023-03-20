@@ -39,6 +39,7 @@ class CharacCards extends HTMLElement {
     render(){
         if(this.shadowRoot){
             this.shadowRoot.innerHTML=`
+            <link rel="stylesheet" href="../app/components/characters/characters.css">
             <section>
                 <div class="images">
                     <div class="bground">
