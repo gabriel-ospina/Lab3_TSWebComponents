@@ -29,7 +29,9 @@ class Banner extends HTMLElement {
             this.shadowRoot.innerHTML = `
             <link rel="stylesheet" href="../app/components/banner/banner.css">
             <section>
-                <div style="background-image: url(${this.image || "https://www.scraapy.com/en/autoparts_images/165907301262e371f40bf89.png"});" class="upper"></div>
+                <div class="upper">
+                    <img src="${this.image || "https://www.scraapy.com/en/autoparts_images/165907301262e371f40bf89.png"}">
+                </div>
                 <div class="lower">
                     <div class="start">
                         <h1>${this.text || "help"}</h1>

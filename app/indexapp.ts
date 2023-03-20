@@ -143,6 +143,7 @@ class AppContainer extends HTMLElement {
             this.shadowRoot.appendChild(hr2);
             
             const secondMainSec=this.ownerDocument.createElement("section");
+            secondMainSec.className = "sec-main-sec"
             secondMainSec.appendChild(this.mainsections[1]);
             secondMainSec.appendChild(this.mainsections[2]);
             this.shadowRoot.appendChild(secondMainSec);

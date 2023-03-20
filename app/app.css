@@ -1,0 +1,9 @@
+section {
+    display: flex;
+    flex-flow: row;
+}
+
+.sec-main-sec {
+    display: flex;
+    flex-flow: column;
+}
