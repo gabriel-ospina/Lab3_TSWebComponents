@@ -6,6 +6,7 @@ import OtherFeatures, { OtherFeatAttribute } from "./components/otherFeatures/ot
 import MainNews, { MainNewsAttribute } from "./components/mainNews/mainNews.js";
 import OtherNews, { OtherNewsAttribute } from "./components/otherNews/otherNews.js";
 import CharacCards, { CharacCardsAttribute } from "./components/characters/characters.js";
+import Games, { GamesAttribute } from "./components/games/Games.js"
 
 
 import dataMainSec from "./Data/DataMainSection.js";
@@ -13,6 +14,7 @@ import dataOtherFeatures from "./Data/DataOtherFeatures.js";
 import dataMainNews from "./Data/DataMainNews.js";
 import dataOtherNews from "./Data/DataOtherNews.js";
 import dataCharacCards from "./Data/DataCharacterCards.js";
+import dataGames from "./Data/DataGames.js";
 class AppContainer extends HTMLElement {
     header: myHeader;
     banner: Banner;
@@ -21,6 +23,7 @@ class AppContainer extends HTMLElement {
     mainnews: MainNews []=[];
     othernews: OtherNews []= [];
     charcards: CharacCards []=[];
+    games: Games []=[];
 
     constructor(){
         super();
@@ -88,6 +91,19 @@ class AppContainer extends HTMLElement {
                 charcard.setAttribute(CharacCardsAttribute.background, characprev.background);
                 charcard.setAttribute(CharacCardsAttribute.name, characprev.name);
                 this.charcards.push(charcard);
+        })
+
+        dataGames.forEach((game) => {
+            const gamecard = this.ownerDocument.createElement("my-games") as Games;
+                gamecard.setAttribute(GamesAttribute.image, game.image);
+                gamecard.setAttribute(GamesAttribute.name, game.name);
+                gamecard.setAttribute(GamesAttribute.date, game.date);
+                gamecard.setAttribute(GamesAttribute.tag, game.tag);
+                gamecard.setAttribute(GamesAttribute.curprice, game.curprice);
+                gamecard.setAttribute(GamesAttribute.regprice, game.regprice);
+                gamecard.setAttribute(GamesAttribute.discount, game.discount);
+                gamecard.setAttribute(GamesAttribute.platform, game.platform);
+                this.games.push(gamecard);
         })
 
     };
@@ -176,6 +192,13 @@ class AppContainer extends HTMLElement {
             digBSTitleDiv.appendChild(seeFullList1)
             this.shadowRoot.appendChild(digBSTitleDiv);
 
+            const DigBSSec=this.ownerDocument.createElement("section");
+            DigBSSec.appendChild(this.games[0]);
+            DigBSSec.appendChild(this.games[1]);
+            DigBSSec.appendChild(this.games[2]);
+            DigBSSec.appendChild(this.games[3]);
+            this.shadowRoot.appendChild(DigBSSec);
+
             const digNewRelTitleDiv=this.ownerDocument.createElement("div");
             const digNewRelTitleH1=this.ownerDocument.createElement("h1");
             const digNewRelTitle= this.ownerDocument.createTextNode("Digital new releases");
@@ -187,6 +210,12 @@ class AppContainer extends HTMLElement {
             digNewRelTitleDiv.appendChild(seeFullList2)
             this.shadowRoot.appendChild(digNewRelTitleDiv);
             
+            const DigNewRelSec=this.ownerDocument.createElement("section");
+            DigNewRelSec.appendChild(this.games[4]);
+            DigNewRelSec.appendChild(this.games[5]);
+            DigNewRelSec.appendChild(this.games[6]);
+            DigNewRelSec.appendChild(this.games[7]);
+            this.shadowRoot.appendChild(DigNewRelSec);
         }
     }
 }

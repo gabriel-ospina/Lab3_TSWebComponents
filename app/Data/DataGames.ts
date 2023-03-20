@@ -6,7 +6,7 @@ interface DataShape {
     curprice: string,
     regprice: string,
     platform: string,
-    dicount: string,
+    discount: string,
 }
 
 const dataGames: DataShape []=[
@@ -18,7 +18,7 @@ const dataGames: DataShape []=[
         curprice: "$39.99",
         regprice: "",
         platform: "<div class='color-tab'></div><span>Nintendo Switch</span>",
-        dicount: "",
+        discount: "",
     },
     {
         image: "https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.25/c_scale,w_300/ncom/software/switch/70010000058477/5a8c4e959c97e52641eae49226704522935806a6e52f35ee14da4956bac26e2c",
@@ -28,7 +28,7 @@ const dataGames: DataShape []=[
         curprice: "$0.99",
         regprice: "",
         platform: "<div class='color-tab'></div><span>Nintendo Switch</span>",
-        dicount: "",
+        discount: "",
     },
     {
         image: "https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.25/c_scale,w_300/ncom/software/switch/70010000000025/7137262b5a64d921e193653f8aa0b722925abc5680380ca0e18a5cfd91697f58",
@@ -38,7 +38,7 @@ const dataGames: DataShape []=[
         curprice: "$59.99",
         regprice: "",
         platform: "<div class='color-tab'></div><span>Nintendo Switch</span>",
-        dicount: "",
+        discount: "",
     },
     {
         image: "https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.25/c_scale,w_300/ncom/en_US/games/switch/i/inside-switch/hero",
@@ -48,7 +48,7 @@ const dataGames: DataShape []=[
         curprice: "$19.99",
         regprice: "",
         platform: "<div class='color-tab'></div><span>Nintendo Switch</span>",
-        dicount: "",
+        discount: "",
     },
     {
         image: "https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.25/c_scale,w_300/ncom/software/switch/70010000061846/73f01ba2458a1430673d64b58bd0b21e2cb6b3e64859a520bd0b93de615aed91",
@@ -58,7 +58,7 @@ const dataGames: DataShape []=[
         curprice: "$59.99",
         regprice: "",
         platform: "<div class='color-tab'></div><span>Nintendo Switch</span>",
-        dicount: "",
+        discount: "",
     },
     {
         image: "https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.25/c_scale,w_300/ncom/software/switch/70010000056956/522184644c9d804e3f6c8574e73e1f41ed30bd3cac8edb9e2a6d96920eb220b8",
@@ -68,7 +68,7 @@ const dataGames: DataShape []=[
         curprice: "$49.99",
         regprice: "",
         platform: "<div class='color-tab'></div><span>Nintendo Switch</span>",
-        dicount: "",
+        discount: "",
     },
     {
         image: "https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.25/c_scale,w_300/ncom/software/switch/70010000046999/303797f4a8701cac6da477fd55f5c7d98220311207f34d876cfe43581a4f8c59",
@@ -78,7 +78,7 @@ const dataGames: DataShape []=[
         curprice: "$21.24",
         regprice: "$24.99",
         platform: "<div class='color-tab'></div><span>Nintendo Switch</span>",
-        dicount: "<div class='discount'>%15</div>",
+        discount: "<div class='discount'>%15</div>",
     },
     {
         image: "https://assets.nintendo.com/image/upload/ar_16:9,b_auto:border,c_lpad/b_white/f_auto/q_auto/dpr_1.25/c_scale,w_300/ncom/software/switch/70010000057985/05a2d994d53122429b374342aa596966efee7b586eb84a98c6fbe8857d62acd7",
@@ -88,6 +88,8 @@ const dataGames: DataShape []=[
         curprice: "$29.99",
         regprice: "",
         platform: "<div class='color-tab'></div><span>Nintendo Switch</span>",
-        dicount: "",
+        discount: "",
     },
 ]
+
+export default dataGames
