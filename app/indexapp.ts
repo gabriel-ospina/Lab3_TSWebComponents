@@ -1,5 +1,4 @@
 import * as components from "./components/indexComponents.js"
-import myHeader, { HeaderAttribute } from "./components/header/header.js"
 import Banner, { BannerAttribute } from "./components/banner/banner.js"
 import MainSec, { MainSecAttribute } from "./components/mainSection/mainSection.js";
 import OtherFeatures, { OtherFeatAttribute } from "./components/otherFeatures/otherFeatures.js";
@@ -16,7 +15,6 @@ import dataOtherNews from "./Data/DataOtherNews.js";
 import dataCharacCards from "./Data/DataCharacterCards.js";
 import dataGames from "./Data/DataGames.js";
 class AppContainer extends HTMLElement {
-    header: myHeader;
     banner: Banner;
     mainsections: MainSec []=[];
     otherfeats: OtherFeatures []=[];
@@ -28,22 +26,6 @@ class AppContainer extends HTMLElement {
     constructor(){
         super();
         this.attachShadow({ mode: "open"})
-
-    
-        const headersec = this.ownerDocument.createElement("my-header") as myHeader;
-            headersec.setAttribute(HeaderAttribute.logoicon, "https://www.scraapy.com/en/autoparts_images/165907301262e371f40bf89.png");
-            // headersec.setAttribute(HeaderAttribute.search, "");
-            // headersec.setAttribute(HeaderAttribute.categ, "");
-            // headersec.setAttribute(HeaderAttribute.supp, "");
-            // headersec.setAttribute(HeaderAttribute.wish, "");
-            // headersec.setAttribute(HeaderAttribute.cart, "");
-            // headersec.setAttribute(HeaderAttribute.login, "");
-            // headersec.setAttribute(HeaderAttribute.store, "");
-            // headersec.setAttribute(HeaderAttribute.games, "");
-            // headersec.setAttribute(HeaderAttribute.switch, "");
-            // headersec.setAttribute(HeaderAttribute.news, "");
-            // headersec.setAttribute(HeaderAttribute.play, "");
-            this.header= headersec;
 
         const bannersec = this.ownerDocument.createElement("my-banner") as Banner;
             bannersec.setAttribute(BannerAttribute.image, "https://assets.nintendo.com/image/upload/f_auto/q_auto/c_fill,w_1500/ncom/en_US/merchandising/center-stage-banner/bayonetta-origins/3600x1300_BayoOrigins_centerstage_desktop");
@@ -117,10 +99,6 @@ class AppContainer extends HTMLElement {
             //alert(JSON.stringify(this.header.join(""),null,3));
             //alert(this.banner);
             this.shadowRoot.innerHTML=`<link rel="stylesheet" href="../app/app.css">`;
-
-            const headerSec= this.ownerDocument.createElement("section");
-            headerSec.appendChild(this.header);
-            this.shadowRoot.appendChild(headerSec);
 
             const bannerSec=this.ownerDocument.createElement("section");
             bannerSec.appendChild(this.banner);

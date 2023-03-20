@@ -1,4 +1,3 @@
-import { HeaderAttribute } from "./components/header/header.js";
 import { BannerAttribute } from "./components/banner/banner.js";
 import { MainSecAttribute } from "./components/mainSection/mainSection.js";
 import { OtherFeatAttribute } from "./components/otherFeatures/otherFeatures.js";
@@ -22,20 +21,6 @@ class AppContainer extends HTMLElement {
         this.charcards = [];
         this.games = [];
         this.attachShadow({ mode: "open" });
-        const headersec = this.ownerDocument.createElement("my-header");
-        headersec.setAttribute(HeaderAttribute.logoicon, "https://www.scraapy.com/en/autoparts_images/165907301262e371f40bf89.png");
-        // headersec.setAttribute(HeaderAttribute.search, "");
-        // headersec.setAttribute(HeaderAttribute.categ, "");
-        // headersec.setAttribute(HeaderAttribute.supp, "");
-        // headersec.setAttribute(HeaderAttribute.wish, "");
-        // headersec.setAttribute(HeaderAttribute.cart, "");
-        // headersec.setAttribute(HeaderAttribute.login, "");
-        // headersec.setAttribute(HeaderAttribute.store, "");
-        // headersec.setAttribute(HeaderAttribute.games, "");
-        // headersec.setAttribute(HeaderAttribute.switch, "");
-        // headersec.setAttribute(HeaderAttribute.news, "");
-        // headersec.setAttribute(HeaderAttribute.play, "");
-        this.header = headersec;
         const bannersec = this.ownerDocument.createElement("my-banner");
         bannersec.setAttribute(BannerAttribute.image, "https://assets.nintendo.com/image/upload/f_auto/q_auto/c_fill,w_1500/ncom/en_US/merchandising/center-stage-banner/bayonetta-origins/3600x1300_BayoOrigins_centerstage_desktop");
         bannersec.setAttribute(BannerAttribute.text, "Bayonetta Origins: Cereza and the Lost Demon™");
@@ -100,9 +85,6 @@ class AppContainer extends HTMLElement {
             //alert(JSON.stringify(this.header.join(""),null,3));
             //alert(this.banner);
             this.shadowRoot.innerHTML = `<link rel="stylesheet" href="../app/app.css">`;
-            const headerSec = this.ownerDocument.createElement("section");
-            headerSec.appendChild(this.header);
-            this.shadowRoot.appendChild(headerSec);
             const bannerSec = this.ownerDocument.createElement("section");
             bannerSec.appendChild(this.banner);
             this.shadowRoot.appendChild(bannerSec);
