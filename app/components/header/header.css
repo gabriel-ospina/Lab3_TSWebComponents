@@ -54,3 +54,25 @@ button {
     cursor: pointer;
     padding: 0px;
 }
+
+.logo-container{
+    width: 105px;
+    height: 52px;
+    background-color: rgb(230, 0, 18);
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    color: white;
+}
+
+svg{
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0px;
+}

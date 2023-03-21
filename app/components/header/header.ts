@@ -70,7 +70,7 @@ class myHeader extends HTMLElement {
             <header>
                 <div class="upper">
                     <div class="start">
-                        <button style="background-image: url(${this.logoicon  || "https://www.scraapy.com/en/autoparts_images/165907301262e371f40bf89.png"});"></button>
+                        <div class="logo-container"><svg viewBox="0 0 97 24" width="69" size="69"><path d="${this.logoicon}" fill="currentColor"></path></svg></div>
                         <form>
                             <input type="text" placeholder="Search games, hardware, news, etc...">
                             <button>All categories<div style="background-image: url(${this.categ || "https://static.thenounproject.com/png/4700132-200.png"});"></div></button>

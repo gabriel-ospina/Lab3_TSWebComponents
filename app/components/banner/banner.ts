@@ -50,6 +50,7 @@ class Banner extends HTMLElement {
                         <button>Available Now</button>
                     </div>
                     <div class="end">
+                        <img src="${this.ageclass || "https://www.scraapy.com/en/autoparts_images/165907301262e371f40bf89.png"}" class="age-class">
                         <div style="background-image: url(${this.ageclass || "https://www.scraapy.com/en/autoparts_images/165907301262e371f40bf89.png"});" class="age-class"></div>
                         <p>Animated Blood, Fantasy Violence</p>
                     </div>
