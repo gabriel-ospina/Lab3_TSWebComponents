@@ -9,9 +9,7 @@ header {
 
 .upper {
     display: flex;
-    -webkit-box-pack: justify;
     justify-content: space-between;
-    -webkit-box-align: center;
     align-items: center;
     height: 52px;
     border-bottom: 1px solid rgb(218, 218, 218);
@@ -21,9 +19,7 @@ header {
 .lower {
     display: flex;
     position: relative;
-    -webkit-box-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
     align-items: center;
     height: 44px;
     border-bottom: 1px solid rgb(218, 218, 218);
@@ -32,14 +28,12 @@ header {
 
 .start {
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
     gap: 1rem;
 }
 
 .end {
     display: flex;
-    -webkit-box-align: center;
     align-items: center;
     gap: 1.75rem;
     padding: 0px 1.25rem;
@@ -47,7 +41,6 @@ header {
 
 button {
     display: inline-flex;
-    -webkit-box-align: center;
     align-items: center;
     border: none;
     background: transparent;
@@ -60,16 +53,13 @@ button {
     height: 52px;
     background-color: rgb(230, 0, 18);
     display: flex;
-    -webkit-box-pack: center;
     justify-content: center;
-    -webkit-box-align: center;
     align-items: center;
     color: white;
 }
 
 svg{
     display: inline-flex;
-    -webkit-box-align: center;
     align-items: center;
     border: none;
     background: transparent;
@@ -117,7 +107,6 @@ form{
 
 a {
     display: inline-flex;
-    -webkit-box-align: center;
     align-items: center;
     border: none;
     background: transparent;

@@ -30,16 +30,15 @@ class Banner extends HTMLElement {
             <link rel="stylesheet" href="../app/components/banner/banner.css">
             <section>
                 <div class="upper">
-                    <img src="${this.image || "https://www.scraapy.com/en/autoparts_images/165907301262e371f40bf89.png"}">
+                    <img class="banner" src="${this.image || "https://www.scraapy.com/en/autoparts_images/165907301262e371f40bf89.png"}">
                 </div>
                 <div class="lower">
                     <div class="start">
                         <h1>${this.text || "help"}</h1>
-                        <button>Available Now</button>
                     </div>
+                    <a><span>Available Now</span></a>
                     <div class="end">
-                        <img src="${this.ageclass || "https://www.scraapy.com/en/autoparts_images/165907301262e371f40bf89.png"}" class="age-class">
-                        <div style="background-image: url(${this.ageclass || "https://www.scraapy.com/en/autoparts_images/165907301262e371f40bf89.png"});" class="age-class"></div>
+                        <img class="age-class" src="${this.ageclass || "https://www.scraapy.com/en/autoparts_images/165907301262e371f40bf89.png"}" class="age-class">
                         <p>Animated Blood, Fantasy Violence</p>
                     </div>
                 </div>
