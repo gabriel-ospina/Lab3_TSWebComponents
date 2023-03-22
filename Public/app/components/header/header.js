@@ -61,49 +61,49 @@ class myHeader extends HTMLElement {
                         </div>
                     </div>
                     <div class="end">
-                        <button>
-                            <div style="background-image: url(${this.supp || "https://static.thenounproject.com/png/4700132-200.png"});"></div>
-                            Support
-                        </button>
-                        <button>
-                            <div style="background-image: url(${this.wish || "https://static.thenounproject.com/png/4700132-200.png"});"></div>
-                            Wish List
-                        </button>
-                        <button>
-                            <div style="background-image: url(${this.cart || "https://static.thenounproject.com/png/4700132-200.png"});"></div>
-                            Cart
-                        </button>
-                        <button>
-                            <div style="background-image: url(${this.login || "https://static.thenounproject.com/png/4700132-200.png"});"></div>
-                            Log in / Sign up
-                        </button>
+                        <a class="button-end">
+                            <div class="sec-icon"><svg viewBox="0 0 32 32" width="18" size="18"><path d="${this.supp}"></path></svg></div>
+                            <span class="bold-text">Support</span>
+                        </a>
+                        <a class="button-end">
+                            <div class="sec-icon"><svg viewBox="0 0 32 32" width="18" size="18"><path d="${this.wish}"></path></svg></div>
+                            <span class="bold-text">Wish List</span>
+                        </a>
+                        <a class="button-end">
+                            <div class="sec-icon"><svg viewBox="0 0 32 32" width="18" size="18"><path d="${this.cart}"></path></svg></div>
+                            <span class="bold-text">Cart</span>
+                        </a>
+                        <a class="button-end">
+                            <div class="sec-icon"><svg viewBox="0 0 32 32" width="18" size="18"><path d="${this.login}"></path></svg></div>
+                            <span class="bold-text">Log in / Sign up</span>
+                        </a>
                     </div>
                 </div>
                 <div class="lower">
-                    <button>
+                    <a>
                         <div style="background-image: url(${this.store || "https://static.thenounproject.com/png/4700132-200.png"});"></div>
-                        My Nintendo Store
+                        <span class="bold-text">My Nintendo Store</span>
                         <div style="background-image: url(${this.categ || "https://static.thenounproject.com/png/4700132-200.png"});"></div>
-                    </button>
-                    <button>
+                    </a>
+                    <a>
                         <div style="background-image: url(${this.games || "https://static.thenounproject.com/png/4700132-200.png"});"></div>
-                        Games
+                        <span class="bold-text">Games</span>
                         <div style="background-image: url(${this.categ || "https://static.thenounproject.com/png/4700132-200.png"});"></div>
-                    </button>
-                    <button>
+                    </a>
+                    <a>
                         <div style="background-image: url(${this.switch || "https://static.thenounproject.com/png/4700132-200.png"});"></div>
-                        Nintendo Swtich
+                        <span class="bold-text">Nintendo Switch</span>
                         <div style="background-image: url(${this.categ || "https://static.thenounproject.com/png/4700132-200.png"});"></div>
-                    </button>
-                    <button>
+                    </a>
+                    <a>
                         <div style="background-image: url(${this.news || "https://static.thenounproject.com/png/4700132-200.png"});"></div>
-                        News & Events
-                    </button>
-                    <button>
+                        <span class="bold-text">News & Events</span>
+                    </a>
+                    <a>
                         <div style="background-image: url(${this.play || "https://static.thenounproject.com/png/4700132-200.png"});"></div>
-                        Play Nintendo
+                        <span class="bold-text">Play Nintendo</span>
                         <div style="background-image: url(${this.categ || "https://static.thenounproject.com/png/4700132-200.png"});"></div>
-                    </button>
+                    </a>
                 </div>
             </header>
             `;

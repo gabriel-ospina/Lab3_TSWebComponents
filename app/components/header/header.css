@@ -106,9 +106,35 @@ form{
 
 .cat-text{
     padding: 2px 8px;
+    margin-right: 8px;
 }
 
 .cat-icon{
     margin-right: 10px;
     height: 14px;
+}
+
+a {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0px;
+}
+
+.button-end{
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem;
+}
+
+.bold-text{
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.sec-icon{
+    height: 18px;
+    margin: 6px;
 }
