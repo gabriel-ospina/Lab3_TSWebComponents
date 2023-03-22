@@ -104,6 +104,7 @@ class AppContainer extends HTMLElement {
             headerSec.appendChild(this.header);
             this.shadowRoot.appendChild(headerSec);
             const bannerSec = this.ownerDocument.createElement("section");
+            bannerSec.className = "banner";
             bannerSec.appendChild(this.banner);
             this.shadowRoot.appendChild(bannerSec);
             const hr1 = this.ownerDocument.createElement("hr");

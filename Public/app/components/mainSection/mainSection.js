@@ -34,12 +34,13 @@ class MainSec extends HTMLElement {
         if (this.shadowRoot) {
             this.shadowRoot.innerHTML = `
             <link rel="stylesheet" href="../app/components/mainSection/mainSection.css">
-            <section>
+            
             <h1>${this.titlesec || "plssss"}</h1>
-            <img src="${this.image || "https://www.scraapy.com/en/autoparts_images/165907301262e371f40bf89.png"}">
-            <section class="lower">
-                <h3>${this.text || "noooo"}</h3><button>${this.label || "carajo"}</button>
-            </section>
+            <section>
+                <img src="${this.image || "https://www.scraapy.com/en/autoparts_images/165907301262e371f40bf89.png"}">
+                <section class="lower">
+                    <h3>${this.text || "XOXO"}</h3><a><span>${this.label || "XOXO"}</span></a>
+                </section>
             </section>
             <hr>
             `;
