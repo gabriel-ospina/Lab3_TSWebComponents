@@ -111,6 +111,7 @@ form{
 
 .cat-icon{
     margin-right: 10px;
+    margin-left: 10px;
     height: 14px;
 }
 
@@ -127,6 +128,12 @@ a {
 .button-end{
     padding-top: 0.875rem;
     padding-bottom: 0.875rem;
+}
+
+.lower-grid{
+    display: flex;
+    gap: 1rem;
+    padding: 2px 0px 0px;
 }
 
 .bold-text{

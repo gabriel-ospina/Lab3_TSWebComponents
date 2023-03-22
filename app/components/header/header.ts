@@ -101,30 +101,32 @@ class myHeader extends HTMLElement {
                     </div>
                 </div>
                 <div class="lower">
-                    <a>
-                        <div style="background-image: url(${this.store || "https://static.thenounproject.com/png/4700132-200.png"});"></div>
-                        <span class="bold-text">My Nintendo Store</span>
-                        <div style="background-image: url(${this.categ || "https://static.thenounproject.com/png/4700132-200.png"});"></div>
-                    </a>
-                    <a>
-                        <div style="background-image: url(${this.games || "https://static.thenounproject.com/png/4700132-200.png"});"></div>
-                        <span class="bold-text">Games</span>
-                        <div style="background-image: url(${this.categ || "https://static.thenounproject.com/png/4700132-200.png"});"></div>
-                    </a>
-                    <a>
-                        <div style="background-image: url(${this.switch || "https://static.thenounproject.com/png/4700132-200.png"});"></div>
-                        <span class="bold-text">Nintendo Switch</span>
-                        <div style="background-image: url(${this.categ || "https://static.thenounproject.com/png/4700132-200.png"});"></div>
-                    </a>
-                    <a>
-                        <div style="background-image: url(${this.news || "https://static.thenounproject.com/png/4700132-200.png"});"></div>
-                        <span class="bold-text">News & Events</span>
-                    </a>
-                    <a>
-                        <div style="background-image: url(${this.play || "https://static.thenounproject.com/png/4700132-200.png"});"></div>
-                        <span class="bold-text">Play Nintendo</span>
-                        <div style="background-image: url(${this.categ || "https://static.thenounproject.com/png/4700132-200.png"});"></div>
-                    </a>
+                    <div class="lower-grid">
+                        <a class="button-lower">
+                            <div class="sec-icon"><svg viewBox="0 0 32 32" width="18" size="18"><path d="${this.store}"></path></svg></div>
+                            <span class="bold-text">My Nintendo Store</span>
+                            <div class="cat-icon"><svg viewBox="0 0 32 32" width="14" size="14"><path d="${this.categ}"></path></svg></div>
+                        </a>
+                        <a class="button-lower">
+                            <div class="sec-icon"><svg viewBox="0 0 32 32" width="18" size="18"><path d="${this.games}"></path></svg></div>
+                            <span class="bold-text">Games</span>
+                            <div class="cat-icon"><svg viewBox="0 0 32 32" width="14" size="14"><path d="${this.categ}"></path></svg></div>
+                        </a>
+                        <a class="button-lower">
+                            <div class="sec-icon"><svg viewBox="0 0 32 32" width="18" size="18"><path d="${this.switch}"></path></svg></div>
+                            <span class="bold-text">Nintendo Switch</span>
+                            <div class="cat-icon"><svg viewBox="0 0 32 32" width="14" size="14"><path d="${this.categ}"></path></svg></div>
+                        </a>
+                        <a class="button-lower">
+                            <div class="sec-icon"><svg viewBox="0 0 32 32" width="18" size="18"><path d="${this.news}"></path></svg></div>
+                            <span class="bold-text">News & Events</span>
+                        </a>
+                        <a class="button-lower">
+                            <div class="sec-icon"><svg viewBox="0 0 32 32" width="18" size="18"><path d="${this.play}"></path></svg></div>
+                            <span class="bold-text">Play Nintendo</span>
+                            <div class="cat-icon"><svg viewBox="0 0 32 32" width="14" size="14"><path d="${this.categ}"></path></svg></div>
+                        </a>
+                    </div>
                 </div>
             </header>
             `
