@@ -16,3 +16,8 @@ section {
 .banner{
     width: 96%;
 }
+
+h1{
+    position: relative;
+    left: 11%;
+}
