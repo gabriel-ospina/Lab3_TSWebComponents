@@ -76,3 +76,18 @@ svg{
     cursor: pointer;
     padding: 0px;
 }
+
+form{
+    width: 28.125rem;
+    height: 2.125rem;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(72, 72, 72);
+   
+}
+
+.search-cont{
+    margin-right: 10px;
+}
