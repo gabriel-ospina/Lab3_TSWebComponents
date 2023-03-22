@@ -91,3 +91,24 @@ form{
 .search-cont{
     margin-right: 10px;
 }
+
+.all-cat{
+    border: none;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 700;
+    min-height: fit-content;
+    display: flex;
+    align-items: center;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+.cat-text{
+    padding: 2px 8px;
+}
+
+.cat-icon{
+    margin-right: 10px;
+    height: 14px;
+}

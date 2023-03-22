@@ -76,8 +76,10 @@ class myHeader extends HTMLElement {
                             <div class="search-cont"><svg viewBox="0 0 32 32" width="18"><path d="${this.search}"></path></svg></div>
                             <span>Search games, hardware, news, etc</span>
                         </button>
-                        <button>All categories<div style="background-image: url(${this.categ || "https://static.thenounproject.com/png/4700132-200.png"});"></div></button>
-                        </form>
+                        <div class="all-cat">
+                            <span class="cat-text">All categories</span>
+                            <div class="cat-icon"><svg viewBox="0 0 32 32" width="14" size="14"><path d="${this.categ}"></path></svg></div>
+                        </div>
                     </div>
                     <div class="end">
                         <button>
