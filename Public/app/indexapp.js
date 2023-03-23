@@ -113,6 +113,7 @@ class AppContainer extends HTMLElement {
             firstMainSec.appendChild(this.mainsections[0]);
             this.shadowRoot.appendChild(firstMainSec);
             const featSec = this.ownerDocument.createElement("section");
+            featSec.className = "other-sec";
             this.otherfeats.forEach((ofeat) => {
                 var _a;
                 featSec.appendChild(ofeat);
@@ -148,6 +149,7 @@ class AppContainer extends HTMLElement {
             characTitleSec.appendChild(characTitle);
             this.shadowRoot.appendChild(characTitleSec);
             const charSec = this.ownerDocument.createElement("section");
+            charSec.className = "char-sec";
             this.charcards.forEach((ccard) => {
                 var _a;
                 charSec.appendChild(ccard);

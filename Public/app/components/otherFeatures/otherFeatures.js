@@ -31,7 +31,7 @@ class OtherFeatures extends HTMLElement {
             <section>
                 <img src="${this.image || "https://www.scraapy.com/en/autoparts_images/165907301262e371f40bf89.png"}">
                 <div>
-                    <h3>${this.tittle || "sorrryyyy"}</h3>
+                    <h3>${this.tittle || "XOXO"}</h3>
                     <span>${this.text || ""}</span>
                 </div>
             </section>

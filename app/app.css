@@ -13,6 +13,10 @@ section {
     flex-flow: column;
 }
 
+.char-sec{
+    padding-bottom: 48px;
+}
+
 .banner{
     width: 96%;
 }
@@ -20,4 +24,11 @@ section {
 h1{
     position: relative;
     left: 11%;
+    display: flex;
+    flex-flow: row;
+}
+
+.other-sec{
+    overflow: hidden;
+    margin-bottom: 50px;
 }
