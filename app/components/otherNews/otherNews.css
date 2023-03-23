@@ -1,0 +1,36 @@
+section{
+    display: flex;
+    flex-direction: column;
+    justify-items: start;
+    height: 322px;
+    width: 262px;
+    padding-right: 2rem;
+}
+
+img {
+    border-radius: 0.25rem;
+}
+
+h3{
+    height: 4rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-decoration: none;
+    display: block;
+    position: relative
+}
+
+span{
+    text-align: left;
+    color: rgb(230, 0, 18);
+    margin-bottom: 1rem;
+    padding: 0px;
+    width: fit-content;
+    font-weight: 700;
+    cursor: pointer;
+    border-bottom: 2px solid rgb(230, 0, 18);
+}

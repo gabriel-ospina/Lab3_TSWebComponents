@@ -1,0 +1,20 @@
+body {
+    font-family: museo-sans, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    color: rgb(72, 72, 72);
+    margin: 0px;
+}
+
+app-container {
+    position: absolute;
+    top: 96px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    height: calc((100% - 2rem) - 1.5rem);
+    background: url(https://assets.nintendo.com/image/upload/q_auto/f_auto/dpr_2.0/ncom/en_US/merchandising/center-stage-banner/bayonetta-origins/3600x800_BayoOrigins_LandingHeaderBG_03) 0% 0% / cover repeat;
+    background-repeat: no-repeat;
+    background-size: 100% 478px;
+}
+

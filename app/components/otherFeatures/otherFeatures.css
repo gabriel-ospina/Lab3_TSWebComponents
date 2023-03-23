@@ -1,0 +1,40 @@
+section{
+    width: 262px;
+    height: 284px;
+    max-width: 16.375rem;
+    margin: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    color: rgb(72, 72, 72);
+    border-width: 0px 1px 1px;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-color: rgb(218, 218, 218);
+    border-bottom-color: rgb(218, 218, 218);
+    border-left-color: rgb(218, 218, 218);
+    border-image: initial;
+    border-top-style: initial;
+    border-top-color: initial;
+    border-radius: 0.25rem;
+}
+
+img{
+    width: 100%;
+    border-radius: 0.25rem;
+}
+div{
+    padding-top: 1rem;
+}
+
+h3{
+    height: 64px;
+    font-size: 1rem;
+    padding: 0px 1rem;
+    margin-top: 0px;
+    margin-bottom: 1rem;
+}
+
+span{
+    padding: 0px 1rem;
+}

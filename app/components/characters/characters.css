@@ -1,0 +1,41 @@
+section{
+    width: 274px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+    border-radius: 0.25rem;
+}
+
+.images{
+   height: 280px;
+}
+
+img{
+    width: 100%;
+    border-radius: 0.25rem;
+}
+
+.bground{
+    display: block;
+    position: relative;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.main{
+    display: block;
+    position: relative;
+    z-index: -1;
+    top: -280px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+h2{
+    font-size: 1.3125rem;
+    margin: 0px;
+}

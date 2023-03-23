@@ -1,17 +1,17 @@
-export var OtherFeatAttribute;
-(function (OtherFeatAttribute) {
-    OtherFeatAttribute["image"] = "image";
-    OtherFeatAttribute["tittle"] = "tittle";
-    OtherFeatAttribute["text"] = "text";
-})(OtherFeatAttribute || (OtherFeatAttribute = {}));
-class OtherFeatures extends HTMLElement {
+export var OtherNewsAttribute;
+(function (OtherNewsAttribute) {
+    OtherNewsAttribute["image"] = "image";
+    OtherNewsAttribute["date"] = "date";
+    OtherNewsAttribute["tittle"] = "tittle";
+})(OtherNewsAttribute || (OtherNewsAttribute = {}));
+class OtherNews extends HTMLElement {
     static get observedAttributes() {
-        const otherfeatattrs = {
+        const mainNewsAttrs = {
             image: null,
+            date: null,
             tittle: null,
-            text: null,
         };
-        return Object.keys(otherfeatattrs);
+        return Object.keys(mainNewsAttrs);
     }
     constructor() {
         super();
@@ -27,17 +27,18 @@ class OtherFeatures extends HTMLElement {
     render() {
         if (this.shadowRoot) {
             this.shadowRoot.innerHTML = `
-            <link rel="stylesheet" href="../app/components/otherFeatures/otherFeatures.css">
+            <link rel="stylesheet" href="../app/components/otherNews/otherNews.css">
             <section>
                 <img src="${this.image || "https://www.scraapy.com/en/autoparts_images/165907301262e371f40bf89.png"}">
                 <div>
+                    <p>${this.date || "XOXO"}</p>
                     <h3>${this.tittle || "XOXO"}</h3>
-                    <span>${this.text || ""}</span>
+                    <span>Read more</span>
                 </div>
             </section>
             `;
         }
     }
 }
-customElements.define("other-feat", OtherFeatures);
-export default OtherFeatures;
+customElements.define("other-news", OtherNews);
+export default OtherNews;
