@@ -150,6 +150,7 @@ class AppContainer extends HTMLElement {
             this.shadowRoot.appendChild(secondMainSec);
 
             const newsTitleSec=this.ownerDocument.createElement("h1");
+            newsTitleSec.className="title"
             const newsTitile= this.ownerDocument.createTextNode("News");
             newsTitleSec.appendChild(newsTitile);
             this.shadowRoot.appendChild(newsTitleSec);
@@ -170,6 +171,7 @@ class AppContainer extends HTMLElement {
             this.shadowRoot.appendChild(hr3);
 
             const characTitleSec=this.ownerDocument.createElement("h1");
+            characTitleSec.className="title"
             const characTitle= this.ownerDocument.createTextNode("Characters");
             characTitleSec.appendChild(characTitle);
             this.shadowRoot.appendChild(characTitleSec);
@@ -185,7 +187,7 @@ class AppContainer extends HTMLElement {
             this.shadowRoot.appendChild(hr4);
             
             const digBSTitleDiv=this.ownerDocument.createElement("div");
-            const digBSTitleH1=this.ownerDocument.createElement("h1");
+            const digBSTitleH1=this.ownerDocument.createElement("h2");
             const digBSTitle= this.ownerDocument.createTextNode("Digital best sellers");
             const seeFullList1=this.ownerDocument.createElement("span");
             const seeFulllist1text=this.ownerDocument.createTextNode("see full list")
@@ -203,7 +205,7 @@ class AppContainer extends HTMLElement {
             this.shadowRoot.appendChild(DigBSSec);
 
             const digNewRelTitleDiv=this.ownerDocument.createElement("div");
-            const digNewRelTitleH1=this.ownerDocument.createElement("h1");
+            const digNewRelTitleH1=this.ownerDocument.createElement("h2");
             const digNewRelTitle= this.ownerDocument.createTextNode("Digital new releases");
             const seeFullList2=this.ownerDocument.createElement("span");
             const seeFulllist2text=this.ownerDocument.createTextNode("see full list")
