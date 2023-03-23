@@ -60,3 +60,7 @@ span{
     color: rgb(230, 0, 18);
     line-height: 1.4;
 }
+
+my-games{
+    overflow: hidden;
+}

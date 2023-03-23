@@ -47,11 +47,13 @@ class Games extends HTMLElement {
                     </div>
                     ${this.tag || ""}
                     <div class="price">
-                        <span>${this.curprice || "XOXO"}</span>
+                        <span class="curprice">${this.curprice || "XOXO"}</span>
                         <span class="regprice">${this.regprice || ""}</span>
                         ${this.discount}
                     </div>
-                    ${this.platform || ""}
+                    <div class="bottom">
+                        ${this.platform || ""}
+                    </div>
                 </div>
             </section>
             `;
