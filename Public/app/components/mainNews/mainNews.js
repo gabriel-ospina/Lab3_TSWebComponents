@@ -29,13 +29,14 @@ class MainNews extends HTMLElement {
     render() {
         if (this.shadowRoot) {
             this.shadowRoot.innerHTML = `
-            <link rel="stylesheet" href="../app/components/mainNews/mainNews.ts">
+            <link rel="stylesheet" href="../app/components/mainNews/mainNews.css">
+            
             <section>
                 <img src="${this.image || "https://www.scraapy.com/en/autoparts_images/165907301262e371f40bf89.png"}">
                 <div>
                     <p>${this.date || "XOXO"}</p>
                     <h3>${this.tittle || "XOXO"}</h3>
-                    <p>${this.text || "XOXO"}</p>
+                    <p class="text">${this.text || "XOXO"}</p>
                     <span>Read more</span>
                 </div>
             </section>
